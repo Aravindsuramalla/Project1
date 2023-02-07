@@ -19,15 +19,32 @@ function print()
     document.write("<br>");
     document.write("Time: "+time);
 
+    let myObj={
+        'name': name,
+        'email': email,
+        'number': number,
+        'Date': `${d}-${m}-${y}`,
+        'Time': Time
+    };
 
-    localStorage.setItem('Name',name);
-    localStorage.setItem('Email',email);
-    localStorage.setItem('Mobile',number);
-    localStorage.setItem('Date',`${d}-${m}-${y}`);
+
+    //localStorage.setItem('Name',name);
+    //localStorage.setItem('Email',email);
+    //localStorage.setItem('Mobile',number);
+    //localStorage.setItem('Date',`${d}-${m}-${y}`);
     //localStorage.setItem('Date',m);
     //localStorage.setItem('Date',y);
-    localStorage.setItem('Time',time);
+    //localStorage.setItem('Time',time);
+
+    let myObj_serialized=JSON.stringify(myObj);
+
+    //console.log(myObj_serialized);
+
+    localStorage.setItem('myObj',myObj_serialized);
+
+    //localStorage.setItem('myObj', myObj);
+    console.log(localStorage);
 
 
-    console.log(localStorage.getItem());
+    //console.log(localStorage.getItem('myObj'));
 }
