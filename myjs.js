@@ -1,6 +1,6 @@
 var ul=document.getElementById('list-of-users');
 ul.addEventListener('click',deleteUsers);
-//ul.addEventListener('click',editUsers);
+ul.addEventListener('click',editUsers);
 document.addEventListener('DOMContentLoaded',loadItems);
 function deleteUsers(e)
 {
@@ -11,7 +11,7 @@ function deleteUsers(e)
         localStorage.removeItem(e.target.parentElement.innerHTML.split('-')[0]);
     }
 }
-/*function editUsers(e)
+function editUsers(e)
 {
     if(e.target.classList.contains('edit-users'))
     {
@@ -26,7 +26,7 @@ function deleteUsers(e)
         localStorage.removeItem(e.target.parentElement.innerHTML.split('-')[0]);
 
     }
-}*/
+}
 function loadItems()
 { 
     
