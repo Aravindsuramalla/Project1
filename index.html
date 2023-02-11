@@ -11,8 +11,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="fr" onsubmit="print()">
-        <body class="body">
+    <form id="fr" onsubmit="print(event)">
+        <body id='body' class="body">
             <div id="box" class="container">
                 <h1>Book a Call</h1><br>
                 <p><b>Book a call slot and our representative will call you within 1hr of selected time</b></p><br>
@@ -32,6 +32,9 @@
                     <li>item2</li>
                     <li>item3</li>
                 </ul>-->
+                <ul id="list-of-users">
+
+                </ul>
             </div>
         </body>
     </form>
